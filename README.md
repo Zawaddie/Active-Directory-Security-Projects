@@ -66,15 +66,15 @@ A Jump/Bastion Host in public subnet: for secure access point for RDP/SSH into t
 
 3. [Microsoft Learn: Active Directory Domain Services]()
 
-4. [EC2 Windows Server & Free Tier notes.]() [Amazon Web Services, Inc.](https://aws.amazon.com/windows/products/ec2/?utm_source=chatgpt.com)
+4. [EC2 Windows Server & Free Tier notes.]() [Amazon Web Services, Inc.](https://aws.amazon.com/windows/products/ec2/)
    
-5. AWS VPC create guide. [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html?utm_source=chatgpt.com)
+5. AWS VPC create guide. [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html)
 
-6. Docs on joining EC2 Windows to AD. [AWS Documentation](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_join_instance.html?utm_source=chatgpt.com)
+6. Docs on joining EC2 Windows to AD. [AWS Documentation](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_join_instance.html)
    
 7. [Active Directory Monitoring Projects Github Repo](https://github.com/0xrajneesh/Active-Directory-Monitoring-Projects) by [Rajneesh G.](https://www.linkedin.com/in/rajneeshgupta01/)
    
-8. [Various other random YouTube tutorials on AD labs & pentesting.]
+8. [Various other random YouTube tutorials on AD labs & pentesting.]()
 
 
 
