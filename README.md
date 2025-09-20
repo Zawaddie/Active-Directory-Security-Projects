@@ -1,10 +1,10 @@
 # Active-Directory-Security-Project
-### Overview
+## Overview
 This repository serves as a documentation for design and deployment of a Windows Active Directory(AD) Lab on AWS. It also Captures the Security Hardening and best practices done to secure the AD environment. Further, it highlights some of the offensive and defensive techniques for exploiting and mitigating AD vulnerabilities.
 
 This repository serves as a documentation for the Step-by-step build up of a Windows Active Directory Lab on AWS. It also Captures the Security Hardening and best practices done to secure the AD environment. Further, it highlights some of the offensive and defensive techniques for exploiting and mitigating AD vulnerabilities.
 
-### 📂 Repository Contents:
+## 📂 Repository Contents:
 
 1. [Introduction](https://github.com/Zawaddie/Active-Directory-Security-Projects#introduction)
 2. [Lab architecture](https://github.com/Zawaddie/Active-Directory-Security-Projects#lab-architecture)
@@ -13,7 +13,7 @@ This repository serves as a documentation for the Step-by-step build up of a Win
 5. [AD Offensive security Test and Pentesting Exercises](https://github.com/Zawaddie/Active-Directory-Security-Projects/blob/main/AD%20Offensive%20security%20Test%20and%20Pentesting%20Exercises.md)
 6. [References](https://github.com/Zawaddie/Active-Directory-Security-Projects?tab=readme-ov-file#-references)
 
-### Introduction
+## Introduction
 
 Since moving in the professional arena, I’ve ovbserved that Microsoft Active Directory is the dominant solution for managing Windows domain networks within organisations. Because of its central role in the Windows domain management, adversaries are often attracted to discovering and exploiting vulnerabilities in the Active Directory ecosystem.
 
@@ -27,7 +27,7 @@ The main advantages of having a configured Windows domain in an Enterprise are:
 - **Managing security policies:** You can configure security policies directly from Active Directory and apply them to users and computers across the network as needed.
 
   
-###  Lab Architecture
+##  Lab Architecture
 
 The lab is built inside a dedicated AWS VPC and contains:
 
@@ -58,15 +58,15 @@ A Jump/Bastion Host in public subnet: for secure access point for RDP/SSH into t
 
 
 
-#### 📚 References
+## 📚 References
 
 1. [The CyberMentor’s](https://www.youtube.com/@TCMSecurityAcademy) [How to Build an Active Directory Hacking Lab video](https://www.youtube.com/watch?v=xftEuVQ7kY0)
 
-2. [AWS Documentation: VPCs and Subnets]
+2. [AWS Documentation: VPCs and Subnets]()
 
-3. [Microsoft Learn: Active Directory Domain Services]
+3. [Microsoft Learn: Active Directory Domain Services]()
 
-4. [EC2 Windows Server & Free Tier notes.] [Amazon Web Services, Inc.](https://aws.amazon.com/windows/products/ec2/?utm_source=chatgpt.com)
+4. [EC2 Windows Server & Free Tier notes.]() [Amazon Web Services, Inc.](https://aws.amazon.com/windows/products/ec2/?utm_source=chatgpt.com)
    
 5. AWS VPC create guide. [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html?utm_source=chatgpt.com)
 
