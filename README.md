@@ -6,12 +6,12 @@ This repository serves as a documentation for the Step-by-step build up of a Win
 
 ### 📂 Repository Contents:
 
-1. Introduction
-2. Lab architecture
-3. step by step Lab Build
-4. AD Defensive measures and Security Hardening
-5. AD Offensive security Test and Pentesting Exercises
-6. References
+1. [Introduction](https://github.com/Zawaddie/Active-Directory-Security-Projects#introduction)
+2. [Lab architecture](https://github.com/Zawaddie/Active-Directory-Security-Projects#lab-architecture)
+3. [step by step Lab Build]()
+4. [AD Defensive measures and Security Hardening Exercises]()
+5. [AD Offensive security Test and Pentesting Exercises](https://github.com/Zawaddie/Active-Directory-Security-Projects/blob/main/AD%20Offensive%20security%20Test%20and%20Pentesting%20Exercises.md)
+6. [References](https://github.com/Zawaddie/Active-Directory-Security-Projects?tab=readme-ov-file#-references)
 
 ### Introduction
 
@@ -19,7 +19,14 @@ Since moving in the professional arena, I’ve ovbserved that Microsoft Active D
 
 To continue developing skills as a Systems Security Analyst, I built a simple Active Directory penetration-testing lab on AWS using several online articles and YouTube videos (listed in the references). The aim of the lab is to provide a safe environment where I can practice both offensive and defensive techniques for exploiting and mitigating AD vulnerabilities.
 
+In regard to Windows Domain Management, **A Windows Domain** is a group of users and computers under the administration of a given business. The **Active Directory (AD)** is the single repository that centralises the administration of common components of a Windows computer network with the **Domain Controller (DC)** as  the server that runs the Active Directory services.
 
+The main advantages of having a configured Windows domain in an Enterprise are:
+
+- **Centralised identity management:** All users across the network can be configured from Active Directory with minimum effort.
+- **Managing security policies:** You can configure security policies directly from Active Directory and apply them to users and computers across the network as needed.
+
+  
 ###  Lab Architecture
 
 The lab is built inside a dedicated AWS VPC and contains:
@@ -32,18 +39,6 @@ The lab is built inside a dedicated AWS VPC and contains:
 
 A Jump/Bastion Host in public subnet: for secure access point for RDP/SSH into the private subnet.
 
-
-#### Networking & Security Groups:
-
-VPC: AD-Lab-VPC (CIDR: 10.0.0.0/16)
-
-Public Subnet: 10.0.1.0/24 → for Jump/Bastion Host or NAT access.
-
-Private Subnet: 10.0.2.0/24 → for DC, Workstations, Kali.
-
-Security Groups configured for realistic AD communication (DNS, Kerberos, LDAP, SMB, RPC, RDP).
-
-A NAT gateway for private instances to reach Internet for updates.
 
 ![AD Lab architecture diagram](./ADLabArchitecture.png)
 
@@ -61,28 +56,26 @@ A NAT gateway for private instances to reach Internet for updates.
 ⚠️ Disclaimer: This project is for educational and lab use only. The captured techniques are not for use in production environments or against systems you don’t own/authorize.
 
 
-### ⚙️ Pre-requisites
 
-- AWS account with free-tier enabled.
-
-- Basic knowledge of EC2, VPC, and Security Groups.
-
-- IAM user with sufficient privileges to create VPC, EC2, and IAM roles
-  
-- Knowledge of Domain Management using Windows Active directory
-  
-- Knowledge of System's Security and best practices
-  
 
 #### 📚 References
 
-Ethical Hacking Lessons: Building Free Active Directory Lab in Azure
+1. [The CyberMentor’s](https://www.youtube.com/@TCMSecurityAcademy) [How to Build an Active Directory Hacking Lab video](https://www.youtube.com/watch?v=xftEuVQ7kY0)
 
-AWS Documentation: VPCs and Subnets
+2. [AWS Documentation: VPCs and Subnets]
 
-Microsoft Learn: Active Directory Domain Services
+3. [Microsoft Learn: Active Directory Domain Services]
 
-Various YouTube tutorials on AD labs & pentesting.
+4. [EC2 Windows Server & Free Tier notes.] [Amazon Web Services, Inc.](https://aws.amazon.com/windows/products/ec2/?utm_source=chatgpt.com)
+   
+5. AWS VPC create guide. [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html?utm_source=chatgpt.com)
+
+6. Docs on joining EC2 Windows to AD. [AWS Documentation](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_join_instance.html?utm_source=chatgpt.com)
+   
+7. [Active Directory Monitoring Projects Github Repo](https://github.com/0xrajneesh/Active-Directory-Monitoring-Projects) by [Rajneesh G.](https://www.linkedin.com/in/rajneeshgupta01/)
+   
+8. [Various other random YouTube tutorials on AD labs & pentesting.]
+
 
 
 ### 🙋 K. Zeddie
