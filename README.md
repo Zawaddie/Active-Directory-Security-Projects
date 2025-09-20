@@ -1,10 +1,10 @@
 # Active-Directory-Security-Project
-## 📌 Overview
+### Overview
 This repository serves as a documentation for design and deployment of a Windows Active Directory(AD) Lab on AWS. It also Captures the Security Hardening and best practices done to secure the AD environment. Further, it highlights some of the offensive and defensive techniques for exploiting and mitigating AD vulnerabilities.
 
 This repository serves as a documentation for the Step-by-step build up of a Windows Active Directory Lab on AWS. It also Captures the Security Hardening and best practices done to secure the AD environment. Further, it highlights some of the offensive and defensive techniques for exploiting and mitigating AD vulnerabilities.
 
-## 📂 Repository Contents:
+### 📂 Repository Contents:
 
 1. Introduction
 2. Lab architecture
@@ -13,14 +13,14 @@ This repository serves as a documentation for the Step-by-step build up of a Win
 5. AD Offensive security Test
 6. References
 
-# Introduction
+### Introduction
 
 Since moving in the professional arena, I’ve ovbserved that Microsoft Active Directory is the dominant solution for managing Windows domain networks within organisations. Because of its central role in the Windows domain management, adversaries are often attracted to discovering and exploiting vulnerabilities in the Active Directory ecosystem.
 
 To continue developing skills as a Systems Security Analyst, I built a simple Active Directory penetration-testing lab on AWS using several online articles and YouTube videos (listed in the references). The aim of the lab is to provide a safe environment where I can practice both offensive and defensive techniques for exploiting and mitigating AD vulnerabilities.
 
 
-## 🏗️ Lab Architecture
+###  Lab Architecture
 
 The lab is built inside a dedicated AWS VPC and contains:
 
@@ -33,7 +33,7 @@ The lab is built inside a dedicated AWS VPC and contains:
 A Jump/Bastion Host in public subnet: for secure access point for RDP/SSH into the private subnet.
 
 
-### Networking & Security Groups:
+#### Networking & Security Groups:
 
 VPC: AD-Lab-VPC (CIDR: 10.0.0.0/16)
 
@@ -45,10 +45,10 @@ Security Groups configured for realistic AD communication (DNS, Kerberos, LDAP, 
 
 A NAT gateway for private instances to reach Internet for updates.
 
-📖 See Architecture Diagram
+![AD Lab architecture diagram](./ADLabArchitecture.png)
 
 
-# The lab provides a safe and controlled environment to:
+#### The lab provides a safe and controlled environment to:
 
 1. Understand how Windows Active Directory works in practice.
 
@@ -61,7 +61,7 @@ A NAT gateway for private instances to reach Internet for updates.
 ⚠️ Disclaimer: This project is for educational and lab use only. The captured techniques are not for use in production environments or against systems you don’t own/authorize.
 
 
-## ⚙️ Pre-requisites
+### ⚙️ Pre-requisites
 
 - AWS account with free-tier enabled.
 
@@ -74,7 +74,7 @@ A NAT gateway for private instances to reach Internet for updates.
 - Knowledge of System's Security and best practices
   
 
-## 📚 References
+#### 📚 References
 
 Ethical Hacking Lessons: Building Free Active Directory Lab in Azure
 
@@ -85,12 +85,5 @@ Microsoft Learn: Active Directory Domain Services
 Various YouTube tutorials on AD labs & pentesting.
 
 
-## 🙋 Author
-
-K. Zeddie
-
-Graduate Electrical & Telecommunications Engineer
-
-Systems & Security Enthusiast
-
-Exploring Cloud, Network, and Security Architecture
+### 🙋 K. Zeddie
+Graduate Electrical & Telecommunications Engineer, Systems & Security Enthusiast and Exploring Cloud and Network Security Architecture.
