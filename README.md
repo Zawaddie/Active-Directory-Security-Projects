@@ -67,9 +67,9 @@ A Jump/Bastion Host in public subnet: for secure access point for RDP/SSH into t
 
 1. [The CyberMentor’s](https://www.youtube.com/@TCMSecurityAcademy) [How to Build an Active Directory Hacking Lab video](https://www.youtube.com/watch?v=xftEuVQ7kY0)
 
-2. [AWS Documentation: VPCs and Subnets]()
+2. [AWS Documentation: VPCs and Subnets](https://medium.com/r/?url=https%3A%2F%2Fdocs.aws.amazon.com%2Fvpc%2Flatest%2Fuserguide%2Fconfigure-your-vpc.html)
 
-3. [Microsoft Learn: Active Directory Domain Services]()
+3. [Microsoft Learn: Active Directory Domain Services](https://learn.microsoft.com/en-us/training/paths/active-directory-domain-services/)
 
 4. [EC2 Windows Server & Free Tier notes.]() [Amazon Web Services, Inc.](https://aws.amazon.com/windows/products/ec2/)
    
