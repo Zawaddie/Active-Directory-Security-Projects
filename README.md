@@ -10,7 +10,7 @@ This repository serves as a documentation for the Step-by-step build up of a Win
 2. Lab architecture
 3. step by step Lab Build
 4. AD Defensive measures and Security Hardening
-5. AD Offensive security Test
+5. AD Offensive security Test and Pentesting Exercises
 6. References
 
 ### Introduction
