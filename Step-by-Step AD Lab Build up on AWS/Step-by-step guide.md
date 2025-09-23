@@ -107,6 +107,7 @@ To do this, we open the AWS VPC console, click **'create VPC'.**
 ![CreateVPC1](LabImages/CreateVPC1.png)
 
 We then add the Name and IPv4 CIDR block.
+
 I used Name tag asAD-PT-Lab-VPC, IPv4 CIDR block: 10.0.0.0/16and Left defaults for IPv6.
 
 ![CreateVPV2](LabImages/CreateVPV2.png)
