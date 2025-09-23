@@ -1,14 +1,14 @@
 # Building a Windows Active Directory Lab on AWS
 
-> Practical step-by-step guide for building up an Active directory on AWS for AD Security learning Purposes.
-> Take AMIs/snapshots before any offensive testing.
+> Practical design and implementation guide for building a Windows Active Directory lab on AWS for AD Security learning Purposes.
+> Consider taking AMIs/snapshots before any offensive testing.
 
 ---
 
 ## Table of contents
 1. [Introduction](#Introduction)
-2. [Lab Architecture](#Lab Architecture)
-3. [Step-by-step Lab Build up](#Step-by-Step Lab Build UP)
+2. [Lab Architecture]()
+3. [Step-by-step Lab Build up]()
    - [Step 1: Preparing the AWS account &IAM/Keypair]()
    - [STEP 2: Creating the VPC, subnets and the IGW]()
    - [STEP 3: Creating an IAM role for SSM & EC2]()
@@ -32,7 +32,7 @@
 ---
 
 ## Overview & Purpose
-This Writeup and folder serves as a documentation for the Step-by-Step build up of a Windows Active Directory Lab on AWS. It also Captures the Security Hardening and best practices done to secure the AD environment. Further, it highlights some of the offensive and defensive techniques for exploiting and mitigating AD vulnerabilities
+This Directory and Writeup serves as a documentation for the Design and Implementation of a Windows Active Directory Lab on AWS. It also Captures the Security Hardening and best practices done to secure the AD environment. Further, it highlights some of the offensive and defensive techniques for exploiting and mitigating AD vulnerabilities
 
 
 ---
@@ -60,6 +60,7 @@ A Jump/Bastion Host in public subnet: for secure access point for RDP/SSH into t
 Security Groups (SG-DC, SG-Workstations, SG-Kali, SG-Jump) configured for realistic AD communication (DNS, Kerberos, LDAP, SMB, RPC, RDP) to restrict access .
 A NAT gateway for private instances to reach Internet for updates. This should be optional especially when you want to create a free AWS Lab. When you provision a NAT gateway, you are charged for each hour that your NAT gateway is available and each gigabyte of data that it processes.
 
+![Lab architecture](LabImages/ADLabArchitecture.png)
 Lab architecture
 
 ---
