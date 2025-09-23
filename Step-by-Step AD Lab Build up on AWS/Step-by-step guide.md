@@ -1,26 +1,39 @@
-# USAGE.md — AD Pentesting Lab Exercises
+# Building a Windows Active Directory Lab on AWS
 
-> Practical exercises (offensive & defensive) for your AWS Active Directory lab.
-> Use only in your isolated lab environment. Take AMIs/snapshots before any offensive testing.
+> Practical step-by-step guide for building up an Active directory on AWS for AD Security learning Purposes.
+> Take AMIs/snapshots before any offensive testing.
 
 ---
 
 ## Table of contents
-1. [Overview & Purpose](#overview--purpose)
-2. [Prerequisites](#prerequisites)
-3. [Lab preparation & safety checklist](#lab-preparation--safety-checklist)
-4. [Environment setup commands (safe)](#environment-setup-commands-safe)
-5. [Defensive exercises & monitoring](#defensive-exercises--monitoring)
-   - [Enable and collect Windows logging](#enable-and-collect-windows-logging)
-   - [Hunt rules and detection ideas](#hunt-rules-and-detection-ideas)
-   - [Hardening & remediation steps](#hardening--remediation-steps)
-7. [Restore & cleanup](#restore--cleanup)
-8. [References & further reading](#references--further-reading)
+1. [Introduction](#Introduction)
+2. [Lab Architecture](#Lab Architecture)
+3. [Step-by-step Lab Build up](#Step-by-Step Lab Build UP)
+   - [Step 1: Preparing the AWS account &IAM/Keypair]()
+   - [STEP 2: Creating the VPC, subnets and the IGW]()
+   - [STEP 3: Creating an IAM role for SSM & EC2]()
+   - [STEP 4: Creating the security groups]()
+   - [STEP 5: Launching and Preparing the EC2 instances]()
+     - [A. Launching EC2: Windows Jump/Bastion Host]()
+     - [B. Launching EC2: Domain Controller (DC01)]()
+       - [Promoting the DC01 to Domain Controller]()
+       - [Install AD Certificate Services (AD CS) on DC01]()
+     - [C. Launching EC2: Windows workstations (WS01 & WS02)]()
+       -[Joining the windows Workstations, WS01 and WS02, to the domain]()
+     - [D. Launching EC2: Kali Linux KALI01)]()
+   - [STEP 6: Creating users, OUs, and a shared folder inside the Domain Controller.]()
+   - [STEP 7:Making AMIs / Snapshots before offensive testing]()
+4. [Clean-up and AWS cost optimization considerations]()
+5. [Lab Security Hardening]()
+6. [Lab Defensive Measures]()
+7. [Lab Offensive Testing]()
+9. [References ](#References)
 
 ---
 
 ## Overview & Purpose
-This document gives you a **structured set of lab exercises** to practice both offensive techniques and defensive detections in an Active Directory environment. Each exercise includes objectives, prerequisites, safe commands to prepare the environment, and high-level steps to perform and defend against the technique. Do **not** perform these attacks outside environments you own or are authorized to test.
+This Writeup and folder serves as a documentation for the Step-by-Step build up of a Windows Active Directory Lab on AWS. It also Captures the Security Hardening and best practices done to secure the AD environment. Further, it highlights some of the offensive and defensive techniques for exploiting and mitigating AD vulnerabilities
+
 
 ---
 
