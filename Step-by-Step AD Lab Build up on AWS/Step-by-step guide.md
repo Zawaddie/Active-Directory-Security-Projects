@@ -57,7 +57,7 @@ The main advantages of having a configured Windows domain in an Enterprise are:
 Centralised identity management: All users across the network can be configured from Active Directory with minimum effort.
 Managing security policies: You can configure security policies directly from Active Directory and apply them to users and computers across the network as needed.
 
-Since moving in the professional arena, I've observed that Microsoft Active Directory is the dominant solution for managing Windows domain networks within organisations. Iyt became a research topic for me for a peiod of about 4 months. Onek key thing I noted is that because of its central role in the Windows domain management, adversaries are often attracted to discovering and exploiting vulnerabilities in the Active Directory ecosystem.
+Since moving in the professional arena, I've observed that Microsoft Active Directory is the dominant solution for managing Windows domain networks within organisations. It became a research topic for me for a peiod of about 4 months. One key thing I have noted is that because of its central role in the Windows domain management, adversaries are often attracted to discovering and exploiting vulnerabilities in the Active Directory ecosystem.
 
 To continue developing skills in the Systems Security Analyst domain, I built a simple Active Directory penetration-testing lab on AWS using several online articles, documentations and YouTube videos (listed in the references). The aim of the lab is to provide a safe environment where I can practice both offensive and defensive techniques for exploiting and mitigating AD vulnerabilities.
 
@@ -71,14 +71,14 @@ The lab is built inside a dedicated AWS VPC **10.0.0.0/16** and contains:
 - Private subnet **10.0.2.0/24** (Domain Controller, DC + 2 Windows workstations + Kali)
 
 **2. EC2 instances:**
-- 1 Domain Controller (DC01) i.e A Windows Server 2025 promoted to Domain Controller with the Active Directory + DNS + ADCS (Certificate Authority).
-- 2 Windows 11 workstations (WS01, WS02) EC2 joined to the AD domain.
-- 1 Kali Linux VM as the attacker machine for offensive security practice and AD monitoring.
-- A Jump/Bastion Host in public subnet: for secure access point for RDP/SSH into the private subnet.
+- **1 Domain Controller (DC01)** i.e A Windows Server 2025 promoted to Domain Controller with the Active Directory + DNS + ADCS (Certificate Authority).
+- **2 Windows 11 workstations (WS01, WS02)** EC2 joined to the AD domain.
+- **1 Kali Linux VM (KALI01)** as the attacker machine for offensive security practice and AD monitoring.
+- **A Jump/Bastion Host (JumpHost)** in public subnet: for secure access point for RDP/SSH into the private subnet.
 
 **3. Security groups and NAT gateway:**
-Security Groups (SG-DC, SG-Workstations, SG-Kali, SG-Jump) configured for realistic AD communication (DNS, Kerberos, LDAP, SMB, RPC, RDP) to restrict access .
-A NAT gateway for private instances to reach Internet for updates. This should be optional especially when you want to create a free AWS Lab. When you provision a NAT gateway, you are charged for each hour that your NAT gateway is available and each gigabyte of data that it processes.
+- Security Groups **(SG-DC, SG-Workstations, SG-Kali, SG-Jump)** configured for realistic AD communication (DNS, Kerberos, LDAP, SMB, RPC, RDP) to restrict access .
+- A NAT gateway for private instances to reach Internet for updates. This should be optional especially when you want to create a free AWS Lab. When you provision a NAT gateway, you are charged for each hour that your NAT gateway is available and each gigabyte of data that it processes.
 
 ![Lab architecture](LabImages/ADLabArchitecture.png)
 Lab architecture
@@ -87,10 +87,10 @@ Lab architecture
 
 ## STEP-BY-STEP LAB BUILD
 After full deployment the lab was able to provide a safe and controlled environment to:
-Understand how Windows Active Directory works in practice.
-Explore common AD vulnerabilities exploited by attackers.
-Practice defensive and hardening strategies for AD.
-Gain hands-on experience with offensive security tools using Kali Linux.
+- Understand how Windows Active Directory works in practice.
+- Explore common AD vulnerabilities exploited by attackers.
+- Practice defensive and hardening strategies for AD.
+- Gain hands-on experience with offensive security tools using Kali Linux.
 
 ⚠️ **Disclaimer:** This project is for educational and lab use only and these the offensive techniques should not be used in production environments or against systems you don't own or authorize.
 
