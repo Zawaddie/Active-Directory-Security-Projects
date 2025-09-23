@@ -164,12 +164,14 @@ We let the 'add route' details to be **0.0.0.0/0** for destination and Target as
 
 Confirm the route has successfully been added as below.
 
-![CreateRT4](LabImages/CreateRT4.png)
+![createRT22](LabImages/createRT22.png)
+
 
 
 Next, we associate the public subnet **(10.0.1.0/24)** with that route table in the **Subnet associations tab** by clicking **'Edit subnet associations'** checking the box for **Public-Subnet-1 (10.0.1.0/24)**  and then **Saving** the association.
 
-![CreateRT22](LabImages/CreateRT22.png)
+![CreateRT4](LabImages/CreateRT4.png)
+
 
 Now that subnet is associated with this route table and all instances launched into that subnet will follow these routes.
 
@@ -190,7 +192,7 @@ We click **'Next'** and add the Name role: **LabRole** and complete the reol cre
 
 Confirm that the role has been created and listed in the available IAM roles as below:
 
-![Lab IAMRole](LabImages/Lab IAMRole.png)
+![Lab IAMRole](LabImages/Lab%20IAMRole.png)
 
 ### STEP 4: Creating the security groups
 We'll make four Security Groups on the **AWS EC2 Console** by choosing 'Security Groups' on the Left Nav bar and then clicking on **'Create security group'.**
