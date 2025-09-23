@@ -201,6 +201,7 @@ We'll make four Security Groups on the **AWS EC2 Console** by choosing 'Security
 
 
 **A. SG-DC**
+
 We create a Security group for **DC01** with the Name: **SG-DC** and VPC: **AD-PT-Lab-VPC.**
 
 For Inbound rules, we choose source type as **'Security Group where appropriate'** and click on **'Add rule'** and for type choose **'Allow All traffic from source = SG-Kali'**. (I added **this later once SG-Kali exists.**) Do not allow 0.0.0.0/0 inbound.
@@ -212,11 +213,10 @@ SG-DC currently only allows AD ports and not RDP, add an SG-to-SG rule:
 - Source: Custom → choose Security group and pick SG-Jump
 - Save.
 
-![SG2](LabImages/SG2.png)
 
 For Outbound rules, keep the default rule allow all, which allows all outbound traffic.
 
-![SG3](LabImages/SG3.png)
+![SG2](LabImages/SG2.png)
 
 
 **B. SG-Workstations**
@@ -232,7 +232,10 @@ For Outbound rules, keep the default rule allow all, which allows all outbound t
 
 We click on Create security group and Verify a successful creation of **SG-Workstations.**
 
+![SG3](LabImages/SG3.png)
+
 **C. SG-Kali**
+
 We again click **'Create security group'** and create a Security group for the Kali instance, with the Name: **SG-Kali** and VPC: **AD-PT-Lab-VPC**
 
 For inbound rules, we allow none from Internet and allow inbound from **SG-Jump** only to administer Kali from jump host when not using SSM-like access for Linux.
@@ -244,6 +247,7 @@ We click on Create security group and Verify a successful creation of **SG-Kali.
 ![SG4](LabImages/SG4.png)
 
 **D. SG-Jump**
+
 For the last security Group, we again click 'Create security group' and create a Security group for the bastion / jump host, with the Security group name: SG-Jump, Description: Bastion host access to allow RDP from admin IP only and VPC: select AD-Lab-VPC
 
 For Inbound rules, click Add rule. Then add the details Type: RDP, Protocol / Port range: auto-filled TCP 3389,Source type: My IP so as to auto-fills the current public IP as x.x.x.x/32.We leave any other inbound rules blank. Do not allow 0.0.0.0/0 inbound.
@@ -253,9 +257,19 @@ We click on Create security group and Verify a successful creation of **SG-Jump*
 
 ![SG5](LabImages/SG5.png)
 
-Use security-group-to-security-group rules (source: the other SG) rather than open CIDR blocks.
+**Note:** For best practice, we use security-group-to-security-group rules (source: the other SG) rather than open CIDR blocks.
 
-![SGs](LabImages/Ss1.png)
+
+**Summary of the Security Groups created:**
+Here's A quick recap of the few rules we'll rely on:
+- **SG-Jump (Jump host):** inbound RDP (3389) and/or SSH (22) from your public IP only (e.g., 203.0.113.5/32). Outbound all.
+- **SG-Workstations:** inbound RDP (3389) from SG-Jump (security-group source). Outbound to DC.
+- **SG-Kali:** allow inbound SSH from SG-Jump if you want to SSH from the jump host; otherwise, use SSM.
+- **SG-DC:** allow AD ports from lab SGs.
+
+Ensure the IAM role **LabRole** we created is attached to all the instances we will create next.
+
+![SGs](LabImages/SGs.png)
 
 ### STEP 5: Launching and Preparing the EC2 instances
 A. Launching EC2: Domain Controller (DC01)
