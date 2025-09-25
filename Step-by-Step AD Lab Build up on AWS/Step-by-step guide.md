@@ -6,7 +6,7 @@
 ---
 
 ## Table of contents
-1. [Introduction](#Introduction)
+1. [Overview](#overview)
 2. [Lab Architecture]()
 3. [Step-by-step Lab Build up]()
    - [Step 1: Preparing the AWS account &IAM/Keypair]()
@@ -37,31 +37,6 @@ This Directory and Writeup serves as a documentation for the Design and Implemen
 
 ---
 
----
-
-## Introduction
-For an enterprise with a number of users and computers in its network, it would be quite difficult to manage each computer as a separate entity, manually configure policies for each of the users across the network and provide on-site support for everyone. To overcome these limitations, enterprises uses Windows domains.
-
-
-A Windows Domain is a group of users and computers under the administration of a given business/enterprise. It is a logical grouping of computers, users, and resources (like printers and servers) that share a common database and security policies. Its main purpose is to provide a centralized management of users and resources.
-
-
-For instance, company.local could be a domain that includes all employee accounts, office PCs, and shared printers.
-The core of any Windows Domain is the Active Directory(AD) Domain Service, or rather, we can say that the AD DS is the engine that powers Windows domains. It is a Directory Service developed by Microsoft that organises information about 'objects' (users, groups, computers, etc ) in a network. I.e, the AD keeps the catalogue/database of all users in company.local, their passwords, group memberships and permissions.
-
-
-So simply put, the Active Directory (AD) is a single repository that centralises the administration of common components of a Windows computer network, with the Domain Controller (DC) as the server that runs the Active Directory services (AD DS).
-
-
-The main advantages of having a configured Windows domain in an Enterprise are:
-Centralised identity management: All users across the network can be configured from Active Directory with minimum effort.
-Managing security policies: You can configure security policies directly from Active Directory and apply them to users and computers across the network as needed.
-
-Since moving in the professional arena, I've observed that Microsoft Active Directory is the dominant solution for managing Windows domain networks within organisations. It became a research topic for me for a peiod of about 4 months. One key thing I have noted is that because of its central role in the Windows domain management, adversaries are often attracted to discovering and exploiting vulnerabilities in the Active Directory ecosystem.
-
-To continue developing skills in the Systems Security Analyst domain, I built a simple Active Directory penetration-testing lab on AWS using several online articles, documentations and YouTube videos (listed in the references). The aim of the lab is to provide a safe environment where I can practice both offensive and defensive techniques for exploiting and mitigating AD vulnerabilities.
-
----
 
 ## Lab Architecture
 The lab is built inside a dedicated AWS VPC **10.0.0.0/16** and contains:
